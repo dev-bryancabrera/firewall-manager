@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home-page.css') }}" />
+    {% include 'includes/styles-imports.html' %}
+    <title>Inicio</title>
+</head>
+
+<body>
+
+    {% extends 'navbar.html' %}
+
+    {% block content %}
+
+    <section class="home-container">
+
+        <div class="container-menu">
+            <article class="card">
+                <div class='background'>
+                    <img src="https://t3.ftcdn.net/jpg/03/09/61/38/360_F_309613855_MjtjxhOKcKcwM6zSqqtUR638v3K4ho2t.jpg"
+                        alt="reglas-firewall">
+                </div>
+                <div class='content'>
+                    <h2>Configuracion de Reglas</h2>
+                    <p>
+                        Gestionar que tipo de trafico puede entrar o salir al servidor.
+                    </p>
+                    <p>Acciones sobre las reglas:</p>
+                    <ul class="actions">
+                        <li class="action">Crear</li>
+                        <li class="action">Eliminar</li>
+                        <li class="action">Visualizar</li>
+                    </ul>
+                    <div class="action-btn">
+                        <a href="/ufw_manager" title="Configurar Reglas de Firewall">
+                            Configurar Reglas Firewall
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class='background'>
+                    <img src="https://reto.com.mx/wp-content/uploads/2023/04/Que-es-el-trafico-de-red-y-por-que-es-importante-monitorearlo.jpg"
+                        alt="monitoreo-trafico">
+                </div>
+                <div class='content'>
+                    <h2>Monitoreo de Trafico de Red</h2>
+                    <p>
+                        Permite supervisar y analizar el flujo de datos en la red, e
+                        identificar posibles problemas que afecten al rendimiento óptimo.
+                    </p>
+                    <p>Acciones sobre los paquetes:</p>
+                    <ul class="actions">
+                        <li class="action">Reportes</li>
+                        <li class="action">Seguimiento</li>
+                    </ul>
+                    <div class="action-btn">
+                        <a href="/packets" title="Monitoreo de Trafico de Red">
+                            Monitoreo de Trafico de Red
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    {% include 'includes/js-imports.html' %}
+    {% endblock %}
+
+</body>
+
+</html>
